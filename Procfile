@@ -1,1 +1,1 @@
-web: python bgpb/runserver.py
+web: gunicorn runserver:app --log-file -
