@@ -5,7 +5,7 @@ from bgpb import app
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'name': 'Visitor'}
+    greeting = "Welcome to the Brian Gillespie blog!"
     posts = []
     title = 'Home Page'
     return render_template('index.html', **locals())
