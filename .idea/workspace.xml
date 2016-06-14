@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1f54242-b4f5-4a33-81dc-f3d8f7b7ba75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bgpb/static/css/jumbotron.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bgpb/templates/index.html" afterPath="$PROJECT_DIR$/bgpb/templates/index.html" />
     </list>
     <ignored path="bgpb.iws" />
@@ -34,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/bgpb/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="41" column="179" selection-start-line="41" selection-start-column="179" selection-end-line="41" selection-end-column="179" />
+              <caret line="41" column="408" selection-start-line="41" selection-start-column="408" selection-end-line="41" selection-end-column="408" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -694,7 +692,7 @@
     <entry file="file://$PROJECT_DIR$/bgpb/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="41" column="179" selection-start-line="41" selection-start-column="179" selection-end-line="41" selection-end-column="179" />
+          <caret line="41" column="408" selection-start-line="41" selection-start-column="408" selection-end-line="41" selection-end-column="408" />
           <folding>
             <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
           </folding>
