@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>{{ greeting }}</h1>
+<div id="outer">
+    <h1 style="text-align: center">{{ greeting }}</h1>
+    <p style="text-align: center">This site is a work in progress. Please feel free to poke around as the site grows.</p>
+    <p style="text-align: center">Right now only the Dog link works, so go check out pics of my amazing pup, Gucci Mane!</p>
+    <p style="text-align: center">I'm currently looking for a job, so please check out my LinkedIn profile up in the navbar.</p>
+    <p style="text-align: center">I'm also working on a few things, this site included, so go check out my GitHub too!</p>
     {% for post in posts %}
     <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
+</div>
 {% endblock %}

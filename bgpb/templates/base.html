@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    {% block headcontent %}{% endblock %}
+
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/starter.css') }}">
     {% if title %}
@@ -36,13 +38,13 @@
                 <li class="active"><a href="/index">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#dog">Dog</a></li>
+                <li><a href="/dog">Dog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div id="otherlinks" style="text-align: right; position: relative; margin-top: 10px;">
-                <a href="http://www.github.com/briangillespie" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/GitHub-Mark-Light-32px.png') }}"></a>
-                <a href="https://www.linkedin.com/in/bngillespie" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/In-2C-34px-R.png') }}"></a>
-            </div>
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 7px;">
+                <a class="outlinks" href="http://www.github.com/briangillespie" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/GitHub-Mark-Light-32px.png') }}"></a>
+                <a class="outlinks" href="https://www.linkedin.com/in/bngillespie" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='images/In-2C-34px-R.png') }}"></a>
+            </ul>
         </div><!--/.nav-collapse -->
 
     </div>
