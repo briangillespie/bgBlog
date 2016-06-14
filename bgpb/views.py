@@ -14,3 +14,8 @@ def index():
 def dog():
     title = 'Dog'
     return render_template('dogv2.html', **locals())
+
+@app.route('/contact')
+def contact():
+    title = 'Contact'
+    return render_template('contact.html', **locals())
