@@ -1,4 +1,8 @@
 from flask import Flask
-app = Flask(__name__)
+from flask_sqlalchemy import SQLAlchemy
 
-import bgpb.views
+app = Flask(__name__)
+app.config.from_object('config')
+db = SQLAlchemy(app)
+
+from bgpb import views, models
