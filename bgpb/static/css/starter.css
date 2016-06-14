@@ -6,3 +6,9 @@ body {
   text-align: center;
 }
 
+.panel-footer.panel-custom {
+    color: #FFFFFF;
+    background-color: #222222;
+    height: 150px;
+}
+
