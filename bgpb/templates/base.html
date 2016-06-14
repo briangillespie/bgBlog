@@ -53,7 +53,7 @@
                 {% if not current_user.is_authenticated %}
                 <li><a style="color: darkgray;" id="modal_trigger" href="#modal">Login</a></li>
                 {% else %}
-                <li><a style="color: darkgray;" href="/logout">Logout</a></li>
+                <li><a style="color: darkgray;" href="/logout" target="_blank" rel="noopener noreferrer">Logout</a></li>
                 {% endif %}
             </ul>
         </div><!--/.nav-collapse -->
@@ -71,9 +71,9 @@
         <br><br>
         <div class="social_login">
             <div class="clearfix">
-                <a class="social_box fb" style="background: #3B5998" href="/authorize/facebook"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Facebook</span></a>
-                <a class="social_box twitter" style="background: #0084b4" href="/authorize/twitter"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Twitter</span></a>
-                <a class="social_box twitter" style="background: #F90101" href="/authorize/google"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Google</span></a>
+                <a class="social_box fb" style="background: #3B5998" href="/authorize/facebook" target="_blank" rel="noopener noreferrer"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Facebook</span></a>
+                <a class="social_box twitter" style="background: #0084b4" href="/authorize/twitter" target="_blank" rel="noopener noreferrer"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Twitter</span></a>
+                <a class="social_box twitter" style="background: #F90101" href="/authorize/google" target="_blank" rel="noopener noreferrer"><span class="icon_title" style="display: block;padding: 5px 0;float: left;font-weight: bold;font-size: 16px;color: #FFFFFF;">Connect with Google</span></a>
             </div>
         </div>
     </section>
