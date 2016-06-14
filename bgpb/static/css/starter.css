@@ -1,9 +1,10 @@
 body {
-  padding-top: 75px;
+    padding-top: 75px;
+    margin: 0 0 20px;
 }
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+    padding: 40px 15px;
+    text-align: center;
 }
 
 .panel-footer.panel-custom {
@@ -11,4 +12,6 @@ body {
     background-color: #222222;
     height: 150px;
 }
+
+
 
