@@ -1,9 +1,6 @@
-from flask import url_for, redirect
-from flask_login import current_app
-from rauth import OAuth2Service, OAuth1Service, session
-from requests import request
+from rauth import OAuth1Service, OAuth2Service
+from flask import current_app, url_for, request, redirect, session
 
-from bgpb import app
 
 class OAuthSignIn(object):
     providers = None
@@ -32,6 +29,7 @@ class OAuthSignIn(object):
                 provider = provider_class()
                 self.providers[provider.provider_name] = provider
         return self.providers[provider_name]
+
 
 class FacebookSignIn(OAuthSignIn):
     def __init__(self):
@@ -68,6 +66,7 @@ class FacebookSignIn(OAuthSignIn):
                                             # is used instead
             me.get('email')
         )
+
 
 class TwitterSignIn(OAuthSignIn):
     def __init__(self):
