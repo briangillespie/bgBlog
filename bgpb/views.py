@@ -4,6 +4,7 @@ from oauth import *
 from bgpb import app, db
 from models import User
 
+
 @app.route('/')
 # @app.route('/index')
 def index():
@@ -12,19 +13,23 @@ def index():
     title = 'Home Page'
     return render_template('index.html', **locals())
 
+
 @app.route('/dog')
 def dog():
     title = 'Dog'
     return render_template('dog.html', **locals())
+
 
 @app.route('/contact')
 def contact():
     title = 'Contact'
     return render_template('contact.html', **locals())
 
-@app.route('/login')
-def login():
-    return render_template('login.html', **locals())
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html', **locals())
+
 
 @app.route('/logout')
 def logout():
