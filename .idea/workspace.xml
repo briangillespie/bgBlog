@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1f54242-b4f5-4a33-81dc-f3d8f7b7ba75" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bgpb/templates/index.html" afterPath="$PROJECT_DIR$/bgpb/templates/index.html" />
     </list>
     <ignored path="bgpb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -108,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bgpb/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
+            <state relative-caret-position="189">
+              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -157,12 +156,12 @@
         <option value="$PROJECT_DIR$/bgpb/__init__.py" />
         <option value="$PROJECT_DIR$/bgpb/static/css/loginstyles.css" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/bgpb/templates/index.html" />
         <option value="$PROJECT_DIR$/bgpb/templates/base.html" />
         <option value="$PROJECT_DIR$/bgpb/views.py" />
         <option value="$PROJECT_DIR$/bgpb/templates/resume.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/bgpb/templates/index.html" />
       </list>
     </option>
   </component>
@@ -991,14 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bgpb/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bgpb/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -1060,6 +1051,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bgpb/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding />
         </state>
       </provider>
