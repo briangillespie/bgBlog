@@ -10,7 +10,6 @@ decorator==4.0.10
 gunicorn==19.6.0
 itsdangerous==0.24
 pbr==1.10.0
-pip==8.1.2
 psycopg2==2.6.1
 rauth==0.7.2
 six==1.10.0
