@@ -1,13 +1,124 @@
 {% extends "base.html" %}
+
+{% block headcontent %}
+<link href="{{ url_for('static', filename='css/jumbotron.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-<div id="outer">
-    <h1 style="text-align: center">{{ greeting }}</h1>
-    <p style="text-align: center">This site is a work in progress. Please feel free to poke around as the site grows.</p>
-    <p style="text-align: center">Right now only the Dog link works, so go check out pics of my amazing pup, Gucci Mane!</p>
-    <p style="text-align: center">I'm currently looking for a job, so please check out my LinkedIn profile up in the navbar.</p>
-    <p style="text-align: center">I'm also working on a few things, this site included, so go check out my GitHub too!</p>
-    {% for post in posts %}
-    <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
-</div>
+<!--parallax 1 -->
+<section class="bg-1 text-center" style="position: relative; margin-top: -30px;">
+    <h1>{{ greeting }}</h1>
+    <p>This site is a work in progress. Please feel free to poke around as the site grows. Right now only the Dog link works, so go check out pics of my amazing pup, Gucci Mane!</p>
+    <p>I'm currently looking for a job, so please check out my LinkedIn profile up in the navbar. I'm also working on a few things, this site included, so go check out my GitHub too!</p>
+</section>
+
+<div class="container">
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Resume and Experience</h3></div>
+                <div class="panel-body">I'm pursuing my Master's degree in Computer Science at Northeastern University. I have experience with web applications and I am passionate for design that delivers max functionality with a clear, robust implementation. I've built web apps and REST APIs using Flask and Spring-boot, and I'm nurturing an interest in Data Science through personal projects on text data mining.
+                </div>
+                <div class="panel-footer text-right"><a href="#" class="btn btn-default">Resume</a></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Things I'm Interested In</h3></div>
+                <div class="panel-body">Go here to see my blog. I intend to mostly just post quick tutorials and pieces about new tech stuff that I find really cool. I like to cook and go hiking in my spare time, so I might occasionally post recipes and pictures from hikes and general adventures. My other main interest is my dog, Gucci. If you want to go see a bunch of pics of him being the best dog ever, just click the Dog button.
+                </div>
+                <div class="panel-footer text-right">
+                    <a href="#" class="btn btn-default">Blog</a>
+                    <a href="/dog" class="btn btn-default">Dog</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Contact Info and Links</h3></div>
+                <div class="panel-body">Check out the link below if you want to get in touch or see my other web presence (which is really just LinkedIn and GitHub at the moment). I'll probably update this page with links to other stuff, like projects and websites I'm working on, or downloads for any sample code I make for any tutorials or whatever. Feel free to shoot me an email if you have any questions for me!
+                </div>
+                <div class="panel-footer text-right"><a href="#" class="btn btn-default">Contact</a></div>
+            </div>
+        </div>
+    </div><!--/row-->
+
+    <hr>
+
+</div><!--/container-->
+
+<div class="divider"></div>
+
+<section class="bg-2">
+    <div class="col-sm-10 col-sm-offset-1 text-center">
+
+        <h1>He's a pup.</h1>
+
+    </div>
+</section>
+<!--/parallax 1-->
+<!--<div class="jumbotron" style="position: relative; margin-top: -30px;">-->
+<!--<div class="container">-->
+<!--<h1>{{ greeting }}</h1>-->
+<!--<p>This site is a work in progress. Please feel free to poke around as the site grows. Right now only the Dog link works, so go check out pics of my amazing pup, Gucci Mane!</p>-->
+<!--<p>I'm currently looking for a job, so please check out my LinkedIn profile up in the navbar. I'm also working on a few things, this site included, so go check out my GitHub too!</p>-->
+<!--&lt;!&ndash;<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="outer">-->
+<!--{% for post in posts %}-->
+<!--<div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>-->
+<!--{% endfor %}-->
+<!--</div>-->
+<script>
+    (function($) {
+
+        $.fn.parallax = function(options) {
+
+            var windowHeight = $(window).height();
+
+            // Establish default settings
+            var settings = $.extend({
+                speed        : 0.15
+            }, options);
+
+            // Iterate over each object in collection
+            return this.each( function() {
+
+                // Save a reference to the element
+                var $this = $(this);
+
+                // Set up Scroll Handler
+                $(document).scroll(function(){
+
+                    var scrollTop = $(window).scrollTop();
+                    var offset = $this.offset().top;
+                    var height = $this.outerHeight();
+
+                    // Check if above or below viewport
+                    if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
+                        return;
+                    }
+
+                    var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
+
+                    // Apply the Y Background Position to Set the Parallax Effect
+                    $this.css('background-position', 'center ' + yBgPosition + 'px');
+
+                });
+            });
+        }
+    }(jQuery));
+
+    $('.bg-1,.bg-3').parallax({
+        speed :	0.15
+    });
+
+    $('.bg-2').parallax({
+        speed :	0.25
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,56 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.divider {
+    height:50px;
+}
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+h1 {
+    font-size: 44px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+p {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.bg-1 {
+	background: url('../images/guccipics/bg.jpg') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-2 {
+	background: url('../images/guccipics/gucci_bed.jpg') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+	background: url('../images/guccipics/gucci_woods.jpg') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+#footer {
+    height: 60px;
+    background-color:#585858;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#efefef;
+}
