@@ -13,7 +13,7 @@ def index():
 @app.route('/dog')
 def dog():
     title = 'Dog'
-    return render_template('dogv2.html', **locals())
+    return render_template('dog.html', **locals())
 
 @app.route('/contact')
 def contact():
