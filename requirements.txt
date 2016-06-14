@@ -12,7 +12,10 @@ itsdangerous==0.24
 pbr==1.10.0
 pip==8.1.2
 psycopg2==2.6.1
+rauth==0.7.2
 six==1.10.0
 sqlalchemy-migrate==0.10.0
 sqlparse==0.1.19
 wheel==0.29.0
+Flask-Login==0.3.2
+requests==2.10.0
