@@ -1,3 +1,6 @@
+import urllib2
+import json
+
 from rauth import OAuth1Service, OAuth2Service
 from flask import current_app, url_for, request, redirect, session
 
@@ -30,6 +33,40 @@ class OAuthSignIn(object):
                 self.providers[provider.provider_name] = provider
         return self.providers[provider_name]
 
+class GoogleSignIn(OAuthSignIn):
+    def __init__(self):
+        super(GoogleSignIn, self).__init__('google')
+        google_auth_info = urllib2.urlopen('https://accounts.google.com/.well-known/openid-configuration')
+        google_params = json.load(google_auth_info)
+        self.service = OAuth2Service(
+            name='google',
+            base_url=google_params.get('userinfo_endpoint'),
+            authorize_url=google_params.get('authorization_endpoint'),
+            access_token_url=google_params.get('token_endpoint'),
+            client_id=self.consumer_id,
+            client_secret=self.consumer_secret
+        )
+
+    def authorize(self):
+        return redirect(self.service.get_authorize_url(
+            scope='email',
+            response_type='code',
+            redirect_uri=self.get_callback_url()
+        ))
+
+    def callback(self):
+        if 'code' not in request.args:
+            return None, None, None
+
+        oauth_session = self.service.get_auth_session(
+            data={'code': request.args['code'],
+                  'grant_type': 'authorization_code',
+                  'redirect_uri': self.get_callback_url()
+                  },
+            decoder=json.loads
+        )
+        me = oauth_session.get('').json()
+        return me['sub'], me['name'], me['email']
 
 class FacebookSignIn(OAuthSignIn):
     def __init__(self):
@@ -61,9 +98,7 @@ class FacebookSignIn(OAuthSignIn):
         me = oauth_session.get('me?fields=id,email').json()
         return (
             'facebook$' + me['id'],
-            me.get('email').split('@')[0],  # Facebook does not provide
-                                            # username, so the email's user
-                                            # is used instead
+            me.get('email').split('@')[0],
             me.get('email')
         )
 
@@ -100,4 +135,4 @@ class TwitterSignIn(OAuthSignIn):
         me = oauth_session.get('account/verify_credentials.json').json()
         social_id = 'twitter$' + str(me.get('id'))
         username = me.get('screen_name')
-        return social_id, username, None   # Twitter does not provide email
+        return social_id, username, None
